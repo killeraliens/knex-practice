@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha --require test/setup.js -- --watch",
-    "practice": "node src/practice.js",
-    "drills": "node src/drills.js",
+    "start": "node src/blogful.js",
     "predeploy": "npm audit",
     "deploy": "git push heroku master"
   },

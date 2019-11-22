@@ -66,6 +66,7 @@ function getTotalCostForEachCategory() {
       console.log(res)
     })
 }
+
 //returnSearchItems('al');
 //itemsByPage(6)
 //returnLength('shopping_list');
