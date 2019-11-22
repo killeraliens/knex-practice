@@ -7,14 +7,6 @@ const knexInstance = knex({
 
 const ArticlesService = require('./articles-service');
 
-// function quickQuery() {
-//   knexInstance
-//   .select('*')
-//   .from('articles')
-//   .then(res => {
-//     console.log(res)
-//   })
-// }
 
 //console.log(ArticlesService.quickQuery(knexInstance));
 //ArticlesService.quickQuery(knexInstance);
