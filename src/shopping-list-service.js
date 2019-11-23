@@ -34,6 +34,13 @@ const ShoppingListService = {
       .from('shopping_list')
       .where('id', id)
       .update(newData)
+  },
+
+  deleteAll(knex) {
+    return knex
+      .select('*')
+      .from('shopping_list')
+      .delete()
   }
 
 }

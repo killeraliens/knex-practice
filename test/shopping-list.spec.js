@@ -62,7 +62,7 @@ describe('ShoppingListService object', () => {
         })
     })
 
-    it('updateItem() resolves with updated item from shopping_list table', () => {
+    it('updateItem() updates item from shopping_list table', () => {
       const newData = { name: 'chopped liver', checked: true, date_added: new Date}
       return ShoppingListService
         .updateItem(db, testItems[1].id, newData)
@@ -73,6 +73,17 @@ describe('ShoppingListService object', () => {
             category: testItems[1].category,
             price: testItems[1].price,
             id: testItems[1].id })
+        })
+    })
+
+    it('deleteAll() removes all items from shopping_list table', () => {
+      return ShoppingListService
+        .deleteAll(db)
+        .then(() => {
+          ShoppingListService.getAllItems(db)
+          .then(res => {
+            expect(res).to.eql([])
+          })
         })
     })
   })
