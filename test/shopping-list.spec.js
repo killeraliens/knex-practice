@@ -43,5 +43,13 @@ describe('ShoppingListService object', () => {
           expect(actual).to.eql(testItems)
         })
     })
+
+    it('getItemById() resolves with correct item from shopping_list table', () => {
+      return ShoppingListService
+        .getItemById(db, testItems[1].id)
+        .then(actual => {
+          expect(actual).to.eql(testItems[1])
+        })
+    })
   })
 })
