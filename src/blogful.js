@@ -22,7 +22,7 @@ ArticlesService.getAllArticles(knexInstance)
     console.log('NEW ARTICLE', newArticle)
     const updateContent = { title: 'A Story about RU'}
     return ArticlesService.updateArticle(knexInstance, newArticle.id, updateContent)
-      .then(() => ArticlesService.getById(knexInstance, newArticle.id))
+      .then(() => A1rticlesService.getById(knexInstance, newArticle.id))
   })
   .then(article => {
     console.log('UPDATED ARTICLE', article)
