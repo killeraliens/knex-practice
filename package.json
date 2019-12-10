@@ -8,7 +8,9 @@
     "start": "node src/shopping.js",
     "predeploy": "npm audit",
     "deploy": "git push heroku master",
-    "seed": "psql -U dunder_mifflin -d knex_practice -f ./sql-scripts/seed.shopping-list.sql"
+    "migrate-products": "psql -U dunder_mifflin -d products -f ./dunder-mifflin-scripts/supplier_orders.sql",
+    "seed-shopping": "psql -U dunder_mifflin -d knex_practice -f ./sql-scripts/seed.shopping-list.sql",
+    "seed-supplier-orders": "psql -U dunder_mifflin -d products -f ./seeds/seed.supplier_orders.sql"
   },
   "keywords": [],
   "author": "",
